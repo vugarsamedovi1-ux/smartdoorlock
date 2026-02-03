@@ -1,259 +1,292 @@
-# 🔐 SDMS - Smart Door Management System
+
+# 🔐 SDMS - ჭკვიანი კარის მართვის სისტემა
 
 ![SDMS Logo](images/sdms_image_1.jpeg)
 
-## 📋 Proje Hakkında
+## 📋 პროექტის შესახებ
 
-**SDMS (Smart Door Management System)**, konut ve iş yerlerinde kapı güvenliğini artırmak için tasarlanmış IoT tabanlı akıllı bir kapı yönetim sistemidir. ESP32 mikrodenetleyici, servo motor, Reed sensör ve Blynk mobil uygulaması kullanılarak gerçek zamanlı kapı kontrolü ve güvenlik bildirimleri sağlar.
+**SDMS (Smart Door Management System)** არის IoT-ზე დაფუძნებული ჭკვიანი კარის მართვის სისტემა, შექმნილი საცხოვრებელ და სამუშაო სივრცეებში კარის უსაფრთხოების გასაუმჯობესებლად. სისტემაში გამოიყენება ESP32 მიკროკონტროლერი, სერვო ძრავა, Reed სენსორი და Blynk მობილური აპლიკაცია, რაც უზრუნველყოფს კარის რეალურ დროში კონტროლს და უსაფრთხოების შეტყობინებებს.
 
-### 🎓 Akademik Bilgiler
-- **Üniversite:** İlyas Devlet Üniversitesi
-- **Fakülte:** İşletme, Teknoloji ve Eğitim Fakültesi
-- **Bölüm:** Bilgisayar Mühendisliği
-- **Proje Türü:** Mezuniyet Projesi A
-- **Yıl:** 2026
-- **Şehir:** Tiflis, Gürcistan
+### 🎓 აკადემიური ინფორმაცია
 
-### 👥 Proje Ekibi
-- **Öğrenciler:**
-  - Vugar Samadovi (Donanım & Sistem Entegrasyonu)
-  - Eljun Hasiyev (Yazılım & Uygulama Geliştirme)
-  
-- **Danışmanlar:**
-  - Davit Chkhaidze
-  - Giorgi Modebadze
+* **უნივერსიტეტი:** ილიასის სახელმწიფო უნივერსიტეტი
+* **ფაკულტეტი:** ბიზნესის, ტექნოლოგიებისა და განათლების ფაკულტეტი
+* **სექცია:** კომპიუტერული ინჟინერია
+* **პროექტის ტიპი:** დამამთავრებელი კურსის დიზაინის პროექტი A
+* **წელი:** 2026
+* **ქალაქი:** თბილისი, საქართველო
 
-## 🌟 Özellikler
+### 👥 პროექტის გუნდი
 
-### Ana Özellikler
-- ✅ **Gerçek Zamanlı İzleme:** Reed sensör ile kapı durumunu anlık tespit
-- 📱 **Mobil Kontrol:** Blynk uygulaması ile uzaktan erişim
-- 🔔 **Güvenlik Uyarıları:** Zorla açılma durumunda sesli alarm ve bildirim
-- 🔒 **Otomatik Kilitleme:** Servo motor ile tam otomatik kilit mekanizması
-- 💡 **LED Gösterge:** Yeşil/Kırmızı LED ile görsel durum takibi
-- 🌐 **Wi-Fi Bağlantı:** IoT bulut servisleri entegrasyonu
+* **სტუდენტები:**
 
-### Teknik Özellikler
-- **Mikrodenetleyici:** ESP32 (Dual-core 240MHz)
-- **İletişim:** Wi-Fi 802.11 b/g/n, Bluetooth
-- **Güç:** 5V DC
-- **Kontrol:** Servo Motor (MG995R)
-- **Sensörler:** Reed Manyetik Sensör
-- **Uyarı:** Buzzer + LED göstergeler
+  * ვუგარ სამედოვი (აპარატურა & სისტემის ინტეგრაცია)
+  * ელჯუნ ხასიევი (პროგრამული უზრუნველყოფა & აპლიკაციების განვითარება)
+* **კონსულტანტები:**
 
-## 🏗️ Sistem Mimarisi
+  * დავით ჭყაიძე
+  * გიორგი მოდებაძე
 
-### Katmanlı Mimari
+## 🌟 მახასიათებლები
 
-1. **Kullanıcı Arayüzü Katmanı**
-   - Blynk Mobil Uygulama
-   - Fiziksel Buton (Manuel Kontrol)
+### მთავარი მახასიათებლები
 
-2. **Kontrol Çekirdeği**
-   - ESP32 Wi-Fi Mikrodenetleyici
+* ✅ **რეალურ დროში მონიტორინგი:** Reed სენსორი კარის მდგომარეობის ანალოგიური კონტროლი
+* 📱 **მობილური კონტროლი:** Blynk აპლიკაციის საშუალებით დისტანციური წვდომა
+* 🔔 **უსაფრთხოების შეტყობინებები:** ძალის გამოყენებით გახსნის შემთხვევაში ხმოვანი ალარმი და შეტყობინება
+* 🔒 **ავტომატური ჩაკეტვა:** Servo Motor-ით სრული ავტომატური საკეტის მექანიზმი
+* 💡 **LED ინდიკატორი:** მწვანე/წითელი LED-ებით ვიზუალური მონიტორინგი
+* 🌐 **Wi-Fi კავშირი:** IoT ღრუბლის სერვისებთან ინტეგრაცია
 
-3. **Yürütme Mekanizmaları**
-   - Servo Motor Kilit
-   - LED Göstergeler
-   - Buzzer Alarm
+### ტექნიკური მახასიათებლები
 
-4. **Sensör Sistemi**
-   - Reed Sensör (Kapı Durumu)
+* **მიკროკონტროლერი:** ESP32 (Dual-core 240MHz)
+* **კომუნიკაცია:** Wi-Fi 802.11 b/g/n, Bluetooth
+* **ძალა:** 5V DC
+* **კონტროლი:** Servo Motor (MG995R)
+* **სენსორები:** Reed მაგნიტური სენსორი
+* **შეტყობინება:** Buzzer + LED ინდიკატორები
 
-5. **Ağ ve Bulut Katmanı**
-   - Wi-Fi Bağlantı
-   - Blynk Cloud Server
+## 🏗️ სისტემის არქიტექტურა
 
-## 🔧 Donanım Bileşenleri
+### ფენოვანი არქიტექტურა
 
-| Bileşen | Model | Adet | Fiyat (GEL) | Açıklama |
-|---------|-------|------|-------------|----------|
-| Mikrodenetleyici | ESP32 Dev Board | 1 | 24.40 | Ana kontrol ünitesi |
-| Servo Motor | Tower Pro MG995R | 1 | 16.00 | Kilit mekanizması |
-| Manyetik Sensör | Reed Sensör | 1 | 2.94 | Kapı durumu tespiti |
-| LED | 3mm LED (Yeşil/Kırmızı) | 2 | 0.40 | Görsel gösterge |
-| Buzzer | Aktif Buzzer | 1 | 4.20 | Sesli uyarı |
-| Buton | Push Button | 1 | 2.26 | Manuel kontrol |
-| Rezistör | 220Ω - 1kΩ | 2 | 0.50 | Akım sınırlama |
-| Kablolar | Jumper Set | 1 | 11.61 | Bağlantı kabloları |
-| **TOPLAM** | | | **62.31 GEL** | |
+1. **მომხმარებლის ინტერფეისის ფენა**
 
-## 📊 Diyagramlar
+   * Blynk მობილური აპლიკაცია
+   * ფიზიკური ღილაკი (მანუალური კონტროლი)
 
-Projede aşağıdaki teknik çizimler mevcuttur:
+2. **კონტროლის ბირთვი**
 
-1. **3D Tasarım** - SDMS cihaz modeli
-2. **Cihaz Diyagramı** - Bileşen yerleşimi
-3. **Elektrik Diyagramı** - Güç dağıtımı
-4. **Devre Şeması** - Bağlantı detayları
-5. **PCB Diyagramı** - Baskı devre tasarımı
-6. **Fonksiyonel Diyagram** - Sistem akış şeması
+   * ESP32 Wi-Fi მიკროკონტროლერი
 
-Tüm diyagramlar `images/` klasöründe yüksek çözünürlükte mevcuttur.
+3. **გადატანის მექანიზმები**
 
-## 💻 Kurulum
+   * Servo Motor საკეტი
+   * LED ინდიკატორები
+   * Buzzer ალარმი
 
-### Gereksinimler
-- Arduino IDE (1.8.x veya üzeri)
-- ESP32 Board Desteği
-- Blynk Kütüphanesi
-- Wi-Fi Bağlantısı
+4. **სენსორული სისტემა**
 
-### Adımlar
+   * Reed სენსორი (კარის მდგომარეობა)
 
-1. **Repository'yi Klonlayın**
+5. **ქსელი და ღრუბლის ფენა**
+
+   * Wi-Fi კავშირი
+   * Blynk Cloud Server
+
+## 🔧 აპარატურის კომპონენტები
+
+| კომპონენტი        | მოდელი                  | რაოდენობა | ფასი (GEL)    | აღწერა                    |
+| ----------------- | ----------------------- | --------- | ------------- | ------------------------- |
+| მიკროკონტროლერი   | ESP32 Dev Board         | 1         | 24.40         | მთავარი კონტროლის ერთეული |
+| Servo Motor       | Tower Pro MG995R        | 1         | 16.00         | საკეტის მექანიზმი         |
+| მაგნიტური სენსორი | Reed სენსორი            | 1         | 2.94          | კარის მდგომარეობის ტესტი  |
+| LED               | 3mm LED (მწვანე/წითელი) | 2         | 0.40          | ვიზუალური ინდიკატორი      |
+| Buzzer            | აქტიური Buzzer          | 1         | 4.20          | ხმოვანი შეტყობინება       |
+| ღილაკი            | Push Button             | 1         | 2.26          | მანუალური კონტროლი        |
+| რეზისტორები       | 220Ω - 1kΩ              | 2         | 0.50          | თოკის შეზღუდვა            |
+| კაბელები          | Jumper Set              | 1         | 11.61         | კავშირის კაბელები         |
+| **ჯამი**          |                         |           | **62.31 GEL** |                           |
+
+## 📊 დიაგრამები
+
+პროექტში მოიცავს შემდეგ ტექნიკურ სქემებს:
+
+1. **3D დიზაინი** - SDMS მოწყობილობის მოდელი
+2. **მოწყობილობის დიაგრამა** - კომპონენტების განლაგება
+3. **ელექტრო დიაგრამა** - ძაბვის განაწილება
+4. **სქემატური დიაგრამა** - კავშირის დეტალები
+5. **PCB დიაგრამა** - ბეჭდური წრის დიზაინი
+6. **ფუნქციური დიაგრამა** - სისტემის ფლოუ
+
+ყველა დიაგრამა მაღალი გარჩევადობით არის `images/` ფოლდერში.
+
+## 💻 ინსტალაცია
+
+### მოთხოვნები
+
+* Arduino IDE (1.8.x ან ახალი)
+* ESP32 დაფის მხარდაჭერა
+* Blynk ბიბლიოთეკა
+* Wi-Fi კავშირი
+
+### ნაბიჯები
+
+1. **Repository-ის კლონირება**
+
 ```bash
 git clone https://github.com/vugarsamedovi1-ux/SDMS-Smart-Door-Management-System.git
 cd SDMS-Smart-Door-Management-System
 ```
 
-2. **Arduino IDE Kurulumu**
-- Arduino IDE'yi açın
-- Preferences > Additional Board Manager URLs'e ekleyin:
+2. **Arduino IDE დაყენება**
+
+* Arduino IDE გახსენით
+* Preferences > Additional Board Manager URLs-ში დაამატეთ:
+
   ```
   https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
   ```
-- Tools > Board > Boards Manager > ESP32 araması yapın ve kurun
+* Tools > Board > Boards Manager > ESP32 მოძებნეთ და დაყენება
 
-3. **Kütüphaneleri Yükleyin**
-- Sketch > Include Library > Manage Libraries
-- "Blynk" araması yapın ve kurun
-- "ESP32Servo" araması yapın ve kurun
+3. **ბიბლიოთეკების დაყენება**
 
-4. **Kodu ESP32'ye Yükleyin**
-- `sdms-code.ino` dosyasını Arduino IDE'de açın
-- Wi-Fi bilgilerinizi ve Blynk Auth Token'ı güncelleyin
-- Board: "ESP32 Dev Module" seçin
-- Upload butonuna tıklayın
+* Sketch > Include Library > Manage Libraries
+* მოძებნეთ "Blynk" და დააინსტალირეთ
+* მოძებნეთ "ESP32Servo" და დააინსტალირეთ
 
-5. **Blynk Uygulamasını Yapılandırın**
-- Blynk uygulamasını indirin (iOS/Android)
-- Yeni proje oluşturun
-- Widget'ları ekleyin (detaylar dökümantasyonda)
+4. **კოდის ატვირთვა ESP32-ზე**
 
-## 🌐 Web Sitesi
+* გახსენით `sdms-code.ino` Arduino IDE-ში
+* განაახლეთ Wi-Fi მონაცემები და Blynk Auth Token
+* Board: "ESP32 Dev Module"
+* Upload ღილაკზე დააჭირეთ
 
-Proje web sitesi modern, responsive ve tek sayfalık bir tasarıma sahiptir.
+5. **Blynk აპლიკაციის კონფიგურაცია**
 
-### Kurulum
-1. `web/` klasörünü web sunucunuza kopyalayın
-2. Tarayıcınızda `index.html` dosyasını açın
+* Blynk აპლიკაცია დაიწერეთ (iOS/Android)
+* შექმენით ახალი პროექტი
+* დაამატეთ Widget-ები (დეტალები დოკუმენტაციაში)
 
-### Özellikler
-- 📱 Tam responsive tasarım
-- 🎨 Modern gradient ve animasyonlar
-- 🖼️ Yüksek çözünürlüklü proje görselleri
-- 📊 İnteraktif diyagram görüntüleyici
-- 👥 Ekip tanıtımı
-- 💰 Detaylı bütçe tablosu
+## 🌐 ვებსაიტი
 
-### Teknolojiler
-- HTML5
-- CSS3 (Modern gradients, flexbox, grid)
-- Vanilla JavaScript (ES6+)
-- Google Fonts (Inter)
+პროექტის ვებსაიტი თანამედროვე, responsive და ერთგვერდიანი დიზაინითაა.
 
-## 🔒 Güvenlik
+### ინსტალაცია
 
-### Uygulanan Güvenlik Katmanları
+1. კოპირება `web/` ფოლდერი ვებსერვერზე
+2. გახსენით `index.html` ბრაუზერში
 
-1. **Fiziksel Güvenlik**
-   - Mekanik kilit blokajı
-   - Zorla açılma tespiti
+### მახასიათებლები
 
-2. **Lojik Güvenlik**
-   - Wi-Fi şifreleme (WPA2/WPA3)
-   - Blynk token doğrulama
-   - Komut validasyonu
+* 📱 სრული responsive დიზაინი
+* 🎨 თანამედროვე gradient და ანიმაციები
+* 🖼️ მაღალი გარჩევადობის პროექტის გამოსახულებები
+* 📊 ინტერაქტიული დიაგრამების ჩვენება
+* 👥 გუნდის პრეზენტაცია
+* 💰 დეტალური ბიუჯეტის ცხრილი
 
-3. **Uyarı Sistemi**
-   - Sesli alarm (Buzzer)
-   - Push bildirimleri
-   - LED göstergesi
+### ტექნოლოგიები
 
-## 📱 Blynk Uygulama Yapılandırması
+* HTML5
+* CSS3 (Modern gradients, flexbox, grid)
+* Vanilla JavaScript (ES6+)
+* Google Fonts (Inter)
 
-### Widget Listesi
-1. **Button Widget** - Kapı kilitleme/açma
-2. **LED Widget** - Kapı durumu göstergesi
-3. **Notification Widget** - Uyarı mesajları
-4. **Value Display** - Sistem durumu
+## 🔒 უსაფრთხოება
 
-### Virtual Pin Kullanımı
-- V0: Kapı kilidi kontrolü
-- V1: Kapı durumu
-- V2: Buzzer kontrolü
-- V3: LED durum
+### გამოყენებული უსაფრთხოების ფენები
 
-## 📈 Proje Zaman Çizelgesi
+1. **ფიზიკური უსაფრთხოება**
 
-| Faz | Hafta | Aktiviteler |
-|-----|-------|-------------|
-| Bileşen Bağlantısı | 1-4 | Servo motor, Reed sensör, LED, Buzzer montajı |
-| ESP32 Programlama | 4-7 | Kontrol mantığı geliştirme ve test |
-| Sistem Montajı | 7-9 | Donanımın kapıya monte edilmesi |
-| Uygulama Geliştirme | 9-12 | Blynk konfigürasyonu ve web sitesi |
-| Test ve Validasyon | 12-15 | Sistem performans değerlendirmesi |
+   * მექანიკური საკეტის ბლოკირება
+   * ძალის გამოყენებით გახსნის დეტექცია
 
-## 📜 Standartlar ve Uyumluluk
+2. **ლოგიკური უსაფრთხოება**
 
-Proje aşağıdaki uluslararası standartlara uygundur:
+   * Wi-Fi კოდირება (WPA2/WPA3)
+   * Blynk token-ის დადასტურება
+   * ბრძანების ვალიდაცია
 
-- **IEEE 802.11** - Wi-Fi iletişim standardı
-- **IEC 62368-1** - Elektronik cihaz güvenliği
-- **IEC 61000** - Elektromanyetik uyumluluk
-- **ISO/IEC 27001** - Bilgi güvenliği yönetimi
-- **IoT Best Practices** - Veri şifreleme ve doğrulama
+3. **შეტყობინების სისტემა**
 
-## 🛠️ Geliştirme
+   * ხმოვანი ალარმი (Buzzer)
+   * Push შეტყობინებები
+   * LED ინდიკატორი
 
-### Kod Yapısı
+## 📱 Blynk აპლიკაციის კონფიგურაცია
+
+### Widget სია
+
+1. **Button Widget** - კარის ჩაკეტვა/გახსნა
+2. **LED Widget** - კარის მდგომარეობის ინდიკატორი
+3. **Notification Widget** - შეტყობინებები
+4. **Value Display** - სისტემის მდგომარეობა
+
+### ვირტუალური პინები
+
+* V0: კარის საკეტის კონტროლი
+* V1: კარის მდგომარეობა
+* V2: Buzzer კონტროლი
+* V3: LED ინდიკატორი
+
+## 📈 პროექტის დროებითი გრაფიკი
+
+| ფაზა                   | კვირა | აქტივობები                                     |
+| ---------------------- | ----- | ---------------------------------------------- |
+| კომპონენტების მონტაჟი  | 1-4   | Servo motor, Reed სენსორი, LED, Buzzer მონტაჟი |
+| ESP32 პროგრამირება     | 4-7   | კონტროლის ლოგიკის განვითარება და ტესტირება     |
+| სისტემის მონტაჟი       | 7-9   | აპარატურის კარზე მონტაჟი                       |
+| აპლიკაციის განვითარება | 9-12  | Blynk კონფიგურაცია და ვებსაიტი                 |
+| ტესტირება და ვალიდაცია | 12-15 | სისტემის ეფექტურობის შეფასება                  |
+
+## 📜 სტანდარტები და შესაბამისობა
+
+პროექტი შეესაბამება შემდეგ საერთაშორისო სტანდარტებს:
+
+* **IEEE 802.11** - Wi-Fi კომუნიკაციის სტანდარტი
+* **IEC 62368-1** - ელექტრონული მოწყობილობების უსაფრთხოება
+* **IEC 61000** - ელექტრომაგნიტური შესაბამისობა
+* **ISO/IEC 27001** - ინფორმაციის უსაფრთხოების მართვა
+* **IoT საუკეთესო პრაქტიკა** - მონაცემთა კოდირება და დადასტურება
+
+## 🛠️ განვითარება
+
+### კოდის სტრუქტურა
+
 ```
 SDMS-Smart-Door-Management-System/
 ├── src/
-│   ├── sdms-code.ino          # Ana ESP32 kodu
-│   └── config.h               # Konfigürasyon dosyası
+│   ├── sdms-code.ino          # მთავარი ESP32 კოდი
+│   └── config.h               # კონფიგურაციის ფაილი
 ├── web/
-│   ├── index.html             # Web sitesi ana sayfa
-│   ├── style.css              # Stiller
+│   ├── index.html             # ვებსაიტის მთავარი ფაილი
+│   ├── style.css              # სტილი
 │   ├── script.js              # JavaScript
-│   └── images/                # Proje görselleri
-├── diagrams/                  # Teknik çizimler
-├── docs/                      # Dökümantasyon
-└── README.md                  # Bu dosya
+│   └── images/                # პროექტის გამოსახულებები
+├── diagrams/                  # ტექნიკური სქემები
+├── docs/                      # დოკუმენტაცია
+└── README.md                  # ეს ფაილი
 ```
 
-### Katkıda Bulunma
-1. Fork yapın
-2. Feature branch oluşturun (`git checkout -b feature/YeniOzellik`)
-3. Değişikliklerinizi commit edin (`git commit -m 'Yeni özellik eklendi'`)
-4. Branch'i push edin (`git push origin feature/YeniOzellik`)
-5. Pull Request oluşturun
+### წვლილის შეტანა
 
-## 📄 Lisans
+1. Fork-ის გაკეთება
+2. Feature branch-ის შექმნა (`git checkout -b feature/YeniOzellik`)
+3. ცვლილებების commit-ება (`git commit -m 'ახალი ფუნქცია დამატებულია'`)
+4. Branch-ის push-ება (`git push origin feature/YeniOzellik`)
+5. Pull Request-ის შექმნა
 
-Bu proje MIT lisansı altında lisanslanmıştır. Detaylar için [LICENSE](LICENSE) dosyasına bakın.
+## 📄 ლიცენზია
 
-## 📞 İletişim
+პროექტი ლიცენზირებულია **MIT License**-ით. დეტალებისთვის იხილეთ [LICENSE](LICENSE) ფაილი.
 
-**Proje Ekibi:**
-- Vugar Samadovi
-- Eljun Hasiyev
+## 📞 კონტაქტი
 
-**Üniversite:**
-İlyas Devlet Üniversitesi  
-İşletme, Teknoloji ve Eğitim Fakültesi  
-Teknoloji Okulu - Bilgisayar Mühendisliği  
-Tiflis, Gürcistan
+**პროექტის გუნდი:**
+
+* ვუგარ სამედოვი
+* ელჯუნ ხასიევი
+
+**უნივერსიტეტი:**
+ილიასის სახელმწიფო უნივერსიტეტი
+ბიზნესის, ტექნოლოგიებისა და განათლების ფაკულტეტი
+ტექნოლოგიური სკოლა - კომპიუტერული ინჟინერია
+თბილისი, საქართველო
 
 **GitHub:** [https://github.com/vugarsamedovi1-ux/SDMS-Smart-Door-Management-System](https://github.com/vugarsamedovi1-ux/SDMS-Smart-Door-Management-System)
 
-## 🙏 Teşekkürler
+## 🙏 მადლობა
 
-Proje danışmanlarımız Davit Chkhaidze ve Giorgi Modebadze'ye, İlyas Devlet Üniversitesi'ne ve bu projeyi destekleyen herkese teşekkür ederiz.
+განსაკუთრებული მადლობა პროექტის კონსულტანტებს: დავით ჭყაიძესა და გიორგ MODebadze-ს, ილიასის სახელმწიფო უნივერსიტეტს და ყველა მხარდამჭერს.
 
 ---
 
-**© 2026 SDMS Project. Tüm hakları saklıdır.**
+**© 2026 SDMS Project. ყველა უფლება დაცულია.**
 
 Made with ❤️ in Tbilisi, Georgia
+
+
+
+Bunu edim?
