@@ -1,106 +1,130 @@
-# 🚀 SDMS Web Sitesi Deployment Rehberi
 
-Bu rehber, SDMS web sitesini GitHub Pages kullanarak ücretsiz bir domain ile nasıl yayınlayacağınızı adım adım açıklar.
+# 🚀 SDMS ვებ-გვერდის გაშვების სახელმძღვანელო
 
-## 📋 İçindekiler
-1. [GitHub Repository Oluşturma](#1-github-repository-oluşturma)
-2. [Dosyaları Yükleme](#2-dosyaları-yükleme)
-3. [GitHub Pages Aktifleştirme](#3-github-pages-aktifleştirme)
-4. [Web Sitesine Erişim](#4-web-sitesine-erişim)
-5. [Özel Domain Bağlama (Opsiyonel)](#5-özel-domain-bağlama-opsiyonel)
+ეს სახელმძღვანელო ნაბიჯ-ნაბიჯ განმარტავს, როგორ გამოაქვეყნოთ SDMS ვებ-გვერდი **GitHub Pages-ის გამოყენებით** უფასო დომენზე.
 
-## 1. GitHub Repository Oluşturma
+## 📋 შინაარსი
 
-### Adım 1.1: GitHub'da Oturum Açın
-- [GitHub.com](https://github.com)'a gidin
-- Hesabınızla giriş yapın (yoksa ücretsiz hesap oluşturun)
+1. [GitHub რეპოზიტორიის შექმნა](#1-github-რეპოზიტორიის-შექმნა)
+2. [ფაილების ატვირთვა](#2-ფაილების-ატვირთვა)
+3. [GitHub Pages-ის ჩართვა](#3-github-pages-ის-ჩართვა)
+4. [ვებ-გვერდზე წვდომა](#4-ვებ-გვერდზე-წვდომა)
+5. [სპეციალური დომენის კავშირი (ვარიანტი)](#5-სპეციალური-დომენის-კავშირი-ვარიანტი)
 
-### Adım 1.2: Yeni Repository Oluşturun
-1. Sağ üst köşedeki "+" ikonuna tıklayın
-2. "New repository" seçin
-3. Repository ayarlarını yapın:
-   - **Repository name:** `SDMS-Smart-Door-Management-System` (veya istediğiniz bir isim)
-   - **Description:** "Smart Door Management System - IoT based intelligent door control solution"
-   - **Public** seçin (GitHub Pages için gerekli)
-   - "Add a README file" seçeneğini işaretleyin
-   - "Create repository" butonuna tıklayın
+---
 
-## 2. Dosyaları Yükleme
+## 1. GitHub რეპოზიტორიის შექმნა
 
-### Seçenek A: GitHub Web Arayüzü ile Yükleme
+### ნაბიჯი 1.1: GitHub-ზე შესვლა
 
-1. Yeni oluşturduğunuz repository'de "Add file" > "Upload files" seçin
-2. Aşağıdaki dosyaları sürükleyip bırakın:
+* გადადით [GitHub.com](https://github.com)
+* შეხვიდეთ თქვენს ანგარიშში (თუ არ გაქვთ, შექმენით უფასო ანგარიში)
+
+### ნაბიჯი 1.2: ახალი რეპოზიტორიის შექმნა
+
+1. ზედა მარჯვენა კუთხეში "+" აიკონზე დააჭირეთ
+2. აირჩიეთ "New repository"
+3. დააყენეთ რეპოზიტორიის პარამეტრები:
+
+   * **Repository name:** `SDMS-Smart-Door-Management-System` (ან ნებისმიერი სახელი)
+   * **Description:** "Smart Door Management System - IoT დაფუძნებული ჭკვიანი კარის კონტროლის გადაწყვეტილება"
+   * აირჩიეთ **Public** (GitHub Pages-ისთვის საჭირო)
+   * მონიშნეთ "Add a README file"
+   * დააჭირეთ "Create repository"
+
+---
+
+## 2. ფაილების ატვირთვა
+
+### ვარიანტი A: GitHub ვებ ინტერფეისით
+
+1. ახალ რეპოზიტორიაში დააჭირეთ "Add file" > "Upload files"
+2. გადაისვეთ და დატოვეთ შემდეგი ფაილები:
+
    ```
    index.html
    style.css
    script.js
    README.md
-   images/ (tüm klasör)
+   images/ (მთელი საქაღალდე)
    ```
-3. Commit mesajı yazın: "Initial commit - SDMS website"
-4. "Commit changes" butonuna tıklayın
+3. ჩაწერეთ Commit მესიჯი: "Initial commit - SDMS website"
+4. დააჭირეთ "Commit changes"
 
-### Seçenek B: Git ile Yükleme (Terminal)
+### ვარიანტი B: Git-ით (Terminal)
 
 ```bash
-# Repository'yi klonlayın
+# რეპოზიტორიის კლონირება
 git clone https://github.com/KULLANICI_ADINIZ/SDMS-Smart-Door-Management-System.git
 cd SDMS-Smart-Door-Management-System
 
-# Dosyaları kopyalayın (bu klasördeki tüm web dosyalarını)
+# ფაილების გადატანა (ყველა ვებ ფაილი)
 cp -r /path/to/sdms-website/* .
 
-# Git'e ekleyin
+# Git-ში დამატება
 git add .
 git commit -m "Initial commit - SDMS website"
 git push origin main
 ```
 
-## 3. GitHub Pages Aktifleştirme
+---
 
-### Adım 3.1: Settings'e Gidin
-1. Repository sayfanızda "Settings" sekmesine tıklayın
-2. Sol menüden "Pages" seçeneğini bulun
+## 3. GitHub Pages-ის ჩართვა
 
-### Adım 3.2: GitHub Pages'i Etkinleştirin
-1. **Source** bölümünde:
-   - Branch: `main` seçin
-   - Folder: `/ (root)` seçin
-2. "Save" butonuna tıklayın
+### ნაბიჯი 3.1: Settings-ში შესვლა
 
-### Adım 3.3: Deployment'ı Bekleyin
-- GitHub Pages, sitenizi otomatik olarak yayınlayacak
-- İşlem genellikle 1-5 dakika sürer
-- Sayfa yenilendiğinde yeşil bir kutuda site URL'niz görünecek
+1. რეპოზიტორიის გვერდზე დააჭირეთ "Settings"
+2. მარცხენა მენიუდან აირჩიეთ "Pages"
 
-## 4. Web Sitesine Erişim
+### ნაბიჯი 3.2: GitHub Pages-ის აქტივაცია
 
-### Ücretsiz GitHub Pages URL'niz
+1. **Source** განყოფილებაში:
+
+   * Branch: `main`
+   * Folder: `/ (root)`
+2. დააჭირეთ "Save"
+
+### ნაბიჯი 3.3: გაშვების დასრულება
+
+* GitHub Pages ავტომატურად გამოაქვეყნებს საიტს
+* პროცესი ჩვეულებრივ 1–5 წუთს სჭირდება
+* გვერდის განახლების შემდეგ მწვანე ყუთში გამოჩნდება საიტის URL
+
+---
+
+## 4. ვებ-გვერდზე წვდომა
+
+### უფასო GitHub Pages URL
+
 ```
 https://KULLANICI_ADINIZ.github.io/SDMS-Smart-Door-Management-System/
 ```
 
-**Örnek:**
+**მაგალითი:**
+
 ```
 https://vugarsamedovi1-ux.github.io/SDMS-Smart-Door-Management-System/
 ```
 
-### Test Edin
-1. URL'yi tarayıcınıza yapıştırın
-2. Web sitenizin düzgün yüklendiğini kontrol edin
-3. Tüm sayfalarda gezinin (menü, özellikler, diyagramlar, vb.)
-4. Mobil görünümü test edin
+### ტესტირება
 
-## 5. Özel Domain Bağlama (Opsiyonel)
+1. ჩასვით URL ბრაუზერში
+2. გადაამოწმეთ, რომ საიტი სწორად იტვირთება
+3. დაათვალიერეთ ყველა გვერდი (მენიუ, ფუნქციები, დიაგრამები და სხვ.)
+4. გადაამოწმეთ მობილური ხედვა
 
-Eğer kendi domain'iniz varsa (örn: www.sdms-project.com), bunu GitHub Pages'e bağlayabilirsiniz.
+---
 
-### Adım 5.1: Domain Sağlayıcınızda DNS Ayarları
+## 5. სპეციალური დომენის კავშირი (ვარიანტი)
 
-Aşağıdaki DNS kayıtlarını ekleyin:
+თუ გაქვთ საკუთარი დომენი (მაგ: [www.sdms-project.com](http://www.sdms-project.com)), შეგიძლიათ დააკავშიროთ GitHub Pages-თან.
 
-**A Records:**
+### ნაბიჯი 5.1: DNS პარამეტრები დომენის მიმწოდებელთან
+
+დამატეთ შემდეგი DNS ჩანაწერები:
+
+**A ჩანაწერები:**
+
 ```
 185.199.108.153
 185.199.109.153
@@ -108,124 +132,148 @@ Aşağıdaki DNS kayıtlarını ekleyin:
 185.199.111.153
 ```
 
-**CNAME Record (www için):**
+**CNAME ჩანაწერი (www-ისთვის):**
+
 ```
 www.yourdomain.com -> KULLANICI_ADINIZ.github.io
 ```
 
-### Adım 5.2: GitHub'da Custom Domain Ayarlama
+### ნაბიჯი 5.2: GitHub-ში Custom Domain-ის დაყენება
 
 1. Repository Settings > Pages
-2. "Custom domain" kutusuna domain'inizi yazın: `www.sdms-project.com`
-3. "Save" butonuna tıklayın
-4. "Enforce HTTPS" seçeneğini işaretleyin (DNS yayılımından sonra)
+2. "Custom domain" ყუთში ჩაწერეთ თქვენი დომენი: `www.sdms-project.com`
+3. დააჭირეთ "Save"
+4. მონიშნეთ "Enforce HTTPS" (DNS გავრცელების შემდეგ)
 
-### DNS Yayılımı
-- DNS değişiklikleri 24-48 saat sürebilir
-- Kontrol için: [whatsmydns.net](https://www.whatsmydns.net/)
+### DNS გავრცელება
 
-## 🔧 Sorun Giderme
+* DNS ცვლილებები შეიძლება 24–48 საათი გაგრძელდეს
+* შესამოწმებლად: [whatsmydns.net](https://www.whatsmydns.net/)
 
-### Problem: Site görünmüyor / 404 hatası
+---
 
-**Çözüm 1:** Dosya yapısını kontrol edin
+## 🔧 პრობლემების მოგვარება
+
+### პრობლემა: საიტი არ ჩანს / 404
+
+**გადაჭრა 1:** გადაამოწმეთ ფაილების სტრუქტურა
+
 ```
 Repository root/
-├── index.html      ← Ana dizinde olmalı
-├── style.css       ← Ana dizinde olmalı
-├── script.js       ← Ana dizinde olmalı
-├── images/         ← Ana dizinde olmalı
+├── index.html      ← მთავარი საქაღალდე
+├── style.css       ← მთავარი საქაღალდე
+├── script.js       ← მთავარი საქაღალდე
+├── images/         ← მთავარი საქაღალდე
 └── README.md
 ```
 
-**Çözüm 2:** Branch ve klasörü kontrol edin
-- Settings > Pages > Source: `main` branch, `/ (root)` folder
+**გადაჭრა 2:** Branch და ფოლდერის შემოწმება
 
-**Çözüm 3:** Cache temizleyin
-- Tarayıcınızda Ctrl+Shift+R (Windows) veya Cmd+Shift+R (Mac)
+* Settings > Pages > Source: `main` branch, `/ (root)` folder
 
-### Problem: Resimler görünmüyor
+**გადაჭრა 3:** Cache-ის გასუფთავება
 
-**Çözüm:** Görsel yollarını kontrol edin
-- HTML'de: `src="images/sdms_image_1.jpeg"`
-- Görsellerin `images/` klasöründe olduğundan emin olun
-- Dosya isimlerinin büyük/küçük harf duyarlı olduğunu unutmayın
+* Windows: Ctrl+Shift+R
+* Mac: Cmd+Shift+R
 
-### Problem: CSS stiller uygulanmıyor
+### პრობლემა: სურათები არ ჩანს
 
-**Çözüm:** CSS dosya yolunu kontrol edin
-- HTML head'de: `<link rel="stylesheet" href="style.css">`
-- `style.css` dosyasının ana dizinde olduğundan emin olun
+**გადაჭრა:**
 
-### Problem: JavaScript çalışmıyor
+* გადაამოწმეთ სურათების გზები HTML-ში: `src="images/sdms_image_1.jpeg"`
+* დარწმუნდით, რომ სურათები `images/` საქაღალდეშია
+* დიდი/პატარა ასოების სიზუსტე მნიშვნელოვანია
 
-**Çözüm:** Script yolunu ve konsolu kontrol edin
-- HTML'de: `<script src="script.js"></script>`
-- Browser Developer Tools > Console'da hata mesajlarını inceleyin
-- F12 tuşuna basarak Developer Tools'u açabilirsiniz
+### პრობლემა: CSS არ მუშაობს
 
-## 📱 Mobil Test
+**გადაჭრა:**
 
-Web sitenizi farklı cihazlarda test edin:
+* HTML `<head>`: `<link rel="stylesheet" href="style.css">`
+* დარწმუნდით, რომ `style.css` მთავარი საქაღალდეშია
+
+### პრობლემა: JavaScript არ მუშაობს
+
+**გადაჭრა:**
+
+* HTML: `<script src="script.js"></script>`
+* Browser Developer Tools > Console-ს შეამოწმეთ შეცდომები
+* F12 ღილაკი გამოიყენეთ Developer Tools-ისთვის
+
+---
+
+## 📱 მობილური ტესტი
+
+ვებ-გვერდის ტესტირება სხვადასხვა მოწყობილობაზე:
 
 1. **Chrome DevTools**
-   - F12 > Toggle device toolbar (Ctrl+Shift+M)
-   - Farklı cihaz boyutlarını test edin
 
-2. **Gerçek Cihazlar**
-   - Telefon ve tablet'te açın
-   - Responsive tasarımı kontrol edin
-   - Touch etkileşimlerini test edin
+   * F12 > Toggle device toolbar (Ctrl+Shift+M)
+   * სხვადასხვა ეკრანის ზომების შემოწმება
 
-## 🔄 Güncelleme Yapma
+2. **რეალური მოწყობილობები**
 
-Web sitenizi güncellemek için:
+   * გახსენით ტელეფონზე და ტაბლეტზე
+   * გადაამოწმეთ responsive დიზაინი
+   * ტესტირება touch ინტერაქციებზე
 
-### Web Arayüzünden
-1. Güncellenecek dosyayı açın
-2. Kalem ikonuna (Edit) tıklayın
-3. Değişiklikleri yapın
-4. "Commit changes" butonuna tıklayın
+---
 
-### Git ile
+## 🔄 განახლება
+
+### ვებ ინტერფეისიდან
+
+1. გახსენით ფაილი რედაქტირებისთვის
+2. დააჭირეთ კალმის აიკონს (Edit)
+3. გააკეთეთ ცვლილებები
+4. დააჭირეთ "Commit changes"
+
+### Git-ით
+
 ```bash
-# Değişiklikleri yapın
-# Sonra:
 git add .
 git commit -m "Site güncellendi"
 git push origin main
 ```
 
-**Not:** GitHub Pages, her push'tan sonra otomatik olarak güncellenir (1-5 dakika).
+> შენიშვნა: GitHub Pages ავტომატურად განაახლებს საიტს push-ის შემდეგ (1–5 წუთში).
 
-## 🎨 Özelleştirme İpuçları
+---
 
-### Renkleri Değiştirme
-`style.css` dosyasında `:root` bölümündeki CSS değişkenlerini düzenleyin:
+## 🎨 პერსონალიზაციის რჩევები
+
+### ფერების შეცვლა
+
+`style.css` ფაილში შეცვალეთ `:root` CSS ცვლადები:
+
 ```css
 :root {
-    --primary: #6366f1;        /* Ana renk */
-    --secondary: #14b8a6;      /* İkincil renk */
-    --dark: #0f172a;           /* Koyu tema */
+    --primary: #6366f1;        /* ძირითადი ფერი */
+    --secondary: #14b8a6;      /* მეორეხარისხოვანი ფერი */
+    --dark: #0f172a;           /* მუქი თემა */
 }
 ```
 
-### Logo Değiştirme
-`index.html` dosyasında `.logo-icon` sınıfını bulun:
+### ლოგოს შეცვლა
+
+`index.html` ფაილში მოძებნეთ `.logo-icon`:
+
 ```html
-<span class="logo-icon">🔐</span>  <!-- Emoji'yi değiştirin -->
+<span class="logo-icon">🔐</span>  <!-- Emoji შეცვალეთ -->
 ```
 
-### İçerik Güncelleme
-Tüm metin içeriği `index.html` dosyasında bulunur. Doğrudan düzenleyebilirsiniz.
+### კონტენტის განახლება
 
-## 📊 Analytics (Opsiyonel)
+ყველა ტექსტი `index.html` ფაილშია, შეგიძლიათ პირდაპირ შეცვალოთ
 
-Google Analytics eklemek için:
+---
 
-1. [Google Analytics](https://analytics.google.com/) hesabı oluşturun
-2. Tracking ID'nizi alın (örn: G-XXXXXXXXXX)
-3. `index.html` dosyasının `<head>` bölümüne ekleyin:
+## 📊 ანალიტიკა (ვარიანტი)
+
+Google Analytics-ის დამატება:
+
+1. შექმენით [Google Analytics](https://analytics.google.com/) ანგარიში
+2. მიიღეთ Tracking ID (მაგ: G-XXXXXXXXXX)
+3. დაამატეთ `<head>`-ში `index.html` ფაილში:
 
 ```html
 <!-- Google Analytics -->
@@ -238,36 +286,45 @@ Google Analytics eklemek için:
 </script>
 ```
 
-## ✅ Checklist
+---
 
-Deployment'tan önce kontrol edin:
+## ✅ შემოწმების სია
 
-- [ ] Tüm dosyalar doğru dizinde
-- [ ] Resim yolları doğru
-- [ ] CSS ve JS bağlantıları çalışıyor
-- [ ] GitHub Pages aktif
-- [ ] Site URL'si çalışıyor
-- [ ] Mobil görünüm test edildi
-- [ ] Tüm linkler çalışıyor
-- [ ] README.md güncel
-- [ ] GitHub linki doğru
+გაშვებამდე გადაამოწმეთ:
 
-## 🆘 Yardım
+* [ ] ყველა ფაილი სწორ საქაღალდეშია
+* [ ] სურათების გზები სწორია
+* [ ] CSS და JS მუშაობს
+* [ ] GitHub Pages აქტივია
+* [ ] საიტის URL მუშაობს
+* [ ] მობილური ხედვა ტესტირებულია
+* [ ] ყველა ბმული მუშაობს
+* [ ] README.md განახლებულია
+* [ ] GitHub ბმული სწორია
 
-Sorun yaşarsanız:
+---
+
+## 🆘 დახმარება
+
+პრობლემის შემთხვევაში:
 
 1. **GitHub Docs:** [pages.github.com](https://pages.github.com/)
 2. **Community Forum:** [GitHub Community](https://github.community/)
 3. **Stack Overflow:** [stackoverflow.com](https://stackoverflow.com/questions/tagged/github-pages)
 
-## 📞 İletişim
+---
 
-Proje ile ilgili sorular için:
-- GitHub Issues: Repository'nizde "Issues" sekmesi
-- Email: Proje ekibi ile iletişime geçin
+## 📞 კონტაქტი
+
+პროექტთან დაკავშირებული კითხვებისთვის:
+
+* GitHub Issues: რეპოზიტორიის "Issues" სექციაში
+* Email: დაუკავშირდით პროექტის გუნდს
 
 ---
 
-**Başarılar! 🎉**
+**გილოცავთ! 🎉**
+თქვენი ვებ-გვერდი ახლა ხელმისაწვდომია მსოფლიოს ნებისმიერი წერტილიდან
 
-Web siteniz artık dünya çapında erişilebilir durumda!
+
+თუ გინდა, შემიძლია შემდეგში გავაკეთო **ეს სახელმძღვანელო ვიზუალური ვერსიად**, პირდაპირ **HTML/Markdown ფორმატში ქართულად**, რომ GitHub README.md-ში პირდაპირ ჩასვათ. გინდა გავაკეთო?
